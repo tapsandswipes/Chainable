@@ -4,6 +4,8 @@ Sintactic sugar for chainable actions over objects
 
 It provides some methods to make creating and working with objects in a functional way.
 
+### then
+
 `func then(_ block: (inout Self) throws -> Void) rethrows -> Self`
 
 For Value types. Allows chained modifications.
@@ -23,6 +25,8 @@ let c = o.then {
 
 ```
 
+### then
+
 `func then(_ block: (Self) throws -> Void) rethrows -> Self`
 
 Same as previous but for Reference types. Very useful for in-place initialization.
@@ -40,6 +44,8 @@ class VC: UIViewController {
     }
 }
 ```
+
+### do
 
 `func `do`(_ block: (Self) throws -> Void) rethrows`
 
