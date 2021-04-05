@@ -70,6 +70,9 @@ final class ChainableTests: XCTestCase {
     
     static var allTests = [
         ("testValueChain", testValueChain),
+        ("testReferenceChain", testReferenceChain),
+        ("testValueDo", testValueDo),
+        ("testReferenceDo", testReferenceDo),
     ]
 }
 
