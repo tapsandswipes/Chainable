@@ -17,7 +17,7 @@ struct Obj {
 
 let o = Obj(a: "hola", b: 0)
 
-let c = a.then {
+let c = o.then {
     $0.a = "adios"
 }
 
