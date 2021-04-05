@@ -4,7 +4,7 @@ Sintactic sugar for chainable actions over objects
 
 It provides some methods to make creating and working with objects in a functional way.
 
-### then
+### Any.then
 
 `func then(_ block: (inout Self) throws -> Void) rethrows -> Self`
 
@@ -25,7 +25,7 @@ let c = o.then {
 
 ```
 
-### then
+### AnyObject.then
 
 `func then(_ block: (Self) throws -> Void) rethrows -> Self`
 
@@ -45,7 +45,7 @@ class VC: UIViewController {
 }
 ```
 
-### do
+### Any.do
 
 `func `do`(_ block: (Self) throws -> Void) rethrows`
 
