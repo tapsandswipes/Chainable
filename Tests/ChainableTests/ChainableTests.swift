@@ -67,7 +67,27 @@ final class ChainableTests: XCTestCase {
         XCTAssertEqual(sut.b, 0)
     }
 
-    
+    func testValueSetter() {
+        let sut = ValueObj(a: "Hello", b: 0)
+
+       let b = sut.set(\.a, "Goodbye")
+
+        XCTAssertEqual(sut.a, "Hello")
+        XCTAssertEqual(sut.b, 0)
+        XCTAssertEqual(b.a, "Goodbye")
+        XCTAssertEqual(b.b, 0)
+    }
+
+    func testReferenceSetter() {
+        let sut = ClassObj(a: "Hello", b: 0)
+
+        let b = sut.set(\.a, "Goodbye")
+
+        XCTAssert(sut === b)
+        XCTAssertEqual(sut.a, "Goodbye")
+        XCTAssertEqual(sut.b, 0)
+    }
+
     static var allTests = [
         ("testValueChain", testValueChain),
         ("testReferenceChain", testReferenceChain),
